@@ -6,46 +6,47 @@
 # Петя: 2
 from itertools import count
 
-# students = [
-#     {'first_name': 'Вася'},
-#     {'first_name': 'Петя'},
-#     {'first_name': 'Маша'},
-#     {'first_name': 'Маша'},
-#     {'first_name': 'Петя'},
-# ]
-# counter = dict()
-#
-# for row in students:
-#     names = row['first_name']
-#     if names in counter:
-#         counter[names] += 1
-#     else:
-#         counter[names] = 1
-# for key, value in counter.items():
-#     print(f'{key}: {value}')
+students = [
+    {'first_name': 'Вася'},
+    {'first_name': 'Петя'},
+    {'first_name': 'Маша'},
+    {'first_name': 'Маша'},
+    {'first_name': 'Петя'},
+]
+counter = {}
+
+for row in students:
+    names = row['first_name']
+    if names in counter:
+        counter[names] += 1
+    else:
+        counter[names] = 1
+for key, value in counter.items():
+    print(f'{key}: {value}')
 
 
 # Задание 2
 # Дан список учеников, нужно вывести самое часто повторяющееся имя
 # Пример вывода:
 # Самое частое имя среди учеников: Маша
-# students = [
-#     {'first_name': 'Вася'},
-#     {'first_name': 'Петя'},
-#     {'first_name': 'Маша'},
-#     {'first_name': 'Маша'},
-#     {'first_name': 'Оля'},
-# ]
-# counter = {}
 #
-# for row in students:
-#     names = row['first_name']
-#     if names in counter:
-#         counter[names] += 1
-#     else:
-#         counter[names] = 1
-# max_name = max(counter, key=counter.get)
-# print(f'Самое частое имя среди учеников: {max_name}')
+students = [
+    {'first_name': 'Вася'},
+    {'first_name': 'Петя'},
+    {'first_name': 'Маша'},
+    {'first_name': 'Маша'},
+    {'first_name': 'Оля'},
+]
+counter = {}
+
+for row in students:
+    names = row['first_name']
+    if names in counter:
+        counter[names] += 1
+    else:
+        counter[names] = 1
+max_name = max(counter, key=counter.get)
+print(f'Самое частое имя среди учеников: {max_name}')
 
 
 # Задание 3
@@ -70,16 +71,6 @@ school_students = [
         {'first_name': 'Саша'},
     ],
 ]
-# for class_num in range(3):
-#     counter = {}
-#     for sub in school_students[class_num]:
-#         names = sub['first_name']
-#         if names in counter:
-#             counter[names] += 1
-#         else:
-#             counter[names] = 1
-#         class_num += 1
-#     print(f'клас {class_num}:')
 
 i = 0
 for row in school_students:
@@ -93,9 +84,6 @@ for row in school_students:
             counter[names] = 1
     max_name = max(counter, key=counter.get)
     print(f'Самое частое имя среди учеников {i} класса: {max_name}')
-# for index, value in enumerate(school_students):
-#     print(f'Index: {index}, Value: {value}')
-
 
 # Задание 4
 # Для каждого класса нужно вывести количество девочек и мальчиков в нём.
