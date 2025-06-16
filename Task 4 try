@@ -26,5 +26,5 @@ for row1 in school:
             counter['мальчики'] += 1
         else:
             counter['девочки'] += 1
-    print(f'Класс {class_name}: {counter}')
+    print(f"Класс {class_name}: девочки {counter['девочки']}, мальчики {counter['мальчики']}")
     
