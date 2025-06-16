@@ -103,7 +103,16 @@ is_male = {
     'Миша': True,
     'Даша': False,
 }
-# ???
+for row1 in school:
+    counter = {'девочки': 0, 'мальчики': 0}
+    class_name = row1['class']
+    for row2 in row1['students']:
+        names = row2['first_name']
+        if is_male[names] == True:
+            counter['мальчики'] += 1
+        else:
+            counter['девочки'] += 1
+    print(f"Класс {class_name}: девочки {counter['девочки']}, мальчики {counter['мальчики']}")
 
 
 # Задание 5
