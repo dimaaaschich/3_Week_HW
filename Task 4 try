@@ -1,0 +1,41 @@
+# Задание 4
+# Для каждого класса нужно вывести количество девочек и мальчиков в нём.
+# Пример вывода:
+# Класс 2a: девочки 2, мальчики 0 
+# Класс 2б: девочки 0, мальчики 2
+
+school = [
+    {'class': '2a', 'students': [{'first_name': 'Маша'}, {'first_name': 'Оля'}]},
+    {'class': '2б', 'students': [{'first_name': 'Олег'}, {'first_name': 'Миша'}]},
+    {'class': '2в', 'students': [{'first_name': 'Даша'}, {'first_name': 'Олег'}, {'first_name': 'Маша'}]},
+]
+is_male = {
+    'Олег': True,
+    'Маша': False,
+    'Оля': False,
+    'Миша': True,
+    'Даша': False,
+}
+
+# print(school[0])
+# print(school[0]['students'])
+# print(school[0]['students'][0])
+
+i = 0
+for row1 in school:
+    counter = {}
+    # print(row1['students'])
+    for row2 in row1['students']:
+        # print(row2)
+        names = row2['first_name'] 
+        print(names)
+        if is_male[names] == True:
+            print('мальчик')
+        
+        # print(is_male['names'])
+    #     if names in counter:
+    #         counter[names] += 1
+    #     else:
+    #         counter[names] = 1
+    # print(counter)    
+    
