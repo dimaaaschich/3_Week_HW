@@ -17,25 +17,14 @@ is_male = {
     'Даша': False,
 }
 
-# print(school[0])
-# print(school[0]['students'])
-# print(school[0]['students'][0])
-
-i = 0
 for row1 in school:
-    counter = {}
-    # print(row1['students'])
+    counter = {'девочки': 0, 'мальчики': 0}
+    class_name = row1['class']
     for row2 in row1['students']:
-        # print(row2)
         names = row2['first_name'] 
-        print(names)
         if is_male[names] == True:
-            print('мальчик')
-        
-        # print(is_male['names'])
-    #     if names in counter:
-    #         counter[names] += 1
-    #     else:
-    #         counter[names] = 1
-    # print(counter)    
+            counter['мальчики'] += 1
+        else:
+            counter['девочки'] += 1
+    print(f'Класс {class_name}: {counter}')
     
