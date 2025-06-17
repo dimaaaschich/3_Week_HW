@@ -130,5 +130,21 @@ is_male = {
     'Олег': True,
     'Миша': True,
 }
-# ???
+
+for row1 in school:
+    counter = {'девочки': 0, 'мальчики': 0}
+    class_name = row1['class']
+    max_boys = 0
+    max_girls = 0
+    for row2 in row1['students']:
+        names = row2['first_name']
+        if is_male[names] == True:
+            counter['мальчики'] += 1
+        else:
+            counter['девочки'] += 1
+        if max_girls < counter['девочки']:
+            output_girls = f'Больше всего девочек в классе {class_name}'
+        elif max_boys < counter['мальчики']:
+            output_boys = (f'Больше всего мальчиков в классе {class_name}')
+print(output_boys, output_girls, sep='\n')
 
